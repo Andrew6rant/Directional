@@ -1,0 +1,6 @@
+{
+  "parent": "directional:block/template_lantern_directional_45",
+  "textures": {
+    "lantern": "minecraft:block/soul_lantern"
+  }
+}
