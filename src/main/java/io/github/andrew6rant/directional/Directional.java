@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowerPotBlock;
+import net.minecraft.block.TorchBlock;
 import net.minecraft.registry.Registries;
 import net.minecraft.state.property.BooleanProperty;
 import org.slf4j.Logger;
@@ -18,7 +19,7 @@ public class Directional implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		for (Block block : Registries.BLOCK) {
-			if (block instanceof FlowerPotBlock) {
+			if (block instanceof FlowerPotBlock || block instanceof TorchBlock) {
 				StateRefresher.INSTANCE.addBlockProperty(block, DIRECTIONAL, DirectionalEnum._0);
 			}
 		}

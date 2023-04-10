@@ -1,0 +1,6 @@
+{
+  "parent": "directional:block/template_torch_directional_67_5",
+  "textures": {
+    "torch": "minecraft:block/redstone_torch_off"
+  }
+}
