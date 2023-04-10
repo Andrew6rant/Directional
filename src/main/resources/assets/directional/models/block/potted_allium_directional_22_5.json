@@ -1,0 +1,6 @@
+{
+  "parent": "directional:block/flower_pot_cross_directional_22_5",
+  "textures": {
+    "plant": "minecraft:block/allium"
+  }
+}

@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "directional",
+	"version": "${version}",
+	"name": "Directional",
+	"description": "Allow certain blocks to be placed relative to the player's direction.",
+	"authors": [
+		"Andrew6rant (Andrew Grant)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/directional/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "io.github.andrew6rant.directional.Directional"
+		]
+	},
+	"mixins": [
+		"directional.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

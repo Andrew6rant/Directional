@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "directional=0": {
+      "model": "minecraft:block/potted_dark_oak_sapling"
+    },
+    "directional=22_5": {
+      "model": "directional:block/potted_dark_oak_sapling_directional_22_5"
+    },
+    "directional=45": {
+      "model": "directional:block/potted_dark_oak_sapling_directional_45"
+    },
+    "directional=67_5": {
+      "model": "directional:block/potted_dark_oak_sapling_directional_67_5"
+    }
+  }
+}

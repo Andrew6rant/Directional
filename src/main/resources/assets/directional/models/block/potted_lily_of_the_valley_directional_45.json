@@ -1,0 +1,6 @@
+{
+  "parent": "directional:block/flower_pot_cross_directional_45",
+  "textures": {
+    "plant": "minecraft:block/lily_of_the_valley"
+  }
+}
