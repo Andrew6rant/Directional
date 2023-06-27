@@ -17,7 +17,7 @@ public class Directional implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		for (Block block : Registries.BLOCK) {
-			if (block instanceof FlowerPotBlock || block instanceof TorchBlock || block instanceof LanternBlock || block instanceof RedstoneBlock || block instanceof PistonBlock) {
+			if (block instanceof FlowerPotBlock || block instanceof TorchBlock || block instanceof LanternBlock || block instanceof RedstoneBlock || block instanceof PistonBlock || block instanceof PistonHeadBlock || block instanceof PistonExtensionBlock || block instanceof DispenserBlock) {
 				StateRefresher.INSTANCE.addBlockProperty(block, DIRECTIONAL, DirectionalEnum._0);
 			}
 		}

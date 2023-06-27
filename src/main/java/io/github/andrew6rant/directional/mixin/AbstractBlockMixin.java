@@ -23,14 +23,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(AbstractBlock.class)
 public class AbstractBlockMixin {
-    /*@Inject(method = "hasSidedTransparency",
-            at = @At(value = "HEAD"), cancellable = true)
-    private void fakeCubeCulling(BlockState state, CallbackInfoReturnable<Boolean> cir) {
-        if (state.contains(PlacementUtil.DIRECTIONAL)) {
-            //System.out.println(state);
-            cir.setReturnValue(true);
-        }
-    }*/
 
     @Inject(method = "getOutlineShape",
             at = @At(value = "HEAD"), cancellable = true)
@@ -40,20 +32,4 @@ public class AbstractBlockMixin {
             cir.cancel();
         }
     }
-
-    //@Shadow
-    //protected BlockState asBlockState() {
-    //    return null;
-    //}
-
-    //
-    /*@Inject(method = "isFullCube",
-            at = @At(value = "HEAD"))
-    private void fakeCubeCulling(BlockView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        //System.out.println("yoo");
-        //cir.setReturnValue(false);
-        //if (this.asBlockState().contains(PlacementUtil.DIRECTIONAL)) {
-        //    cir.setReturnValue(false);
-        //}
-    }*/
 }

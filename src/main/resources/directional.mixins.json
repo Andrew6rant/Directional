@@ -7,8 +7,7 @@
     "BlockMixin",
     "FlowerPotBlockMixin",
     "LanternBlockMixin",
-    "PistonMixin",
-    "TorchBlockMixin"
+    "PistonMixin"
   ],
   "injectors": {
     "defaultRequire": 1
