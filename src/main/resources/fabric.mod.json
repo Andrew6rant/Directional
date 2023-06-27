@@ -17,11 +17,15 @@
 	"entrypoints": {
 		"main": [
           "io.github.andrew6rant.directional.Directional"
+		],
+		"client": [
+			"io.github.andrew6rant.directional.DirectionalClient"
 		]
 	},
 	"mixins": [
 		"directional.mixins.json"
 	],
+	"accessWidener" : "directional.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.14.19",
 		"minecraft": "~1.19.4",

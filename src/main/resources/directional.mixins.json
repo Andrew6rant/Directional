@@ -1,15 +1,16 @@
 {
-	"required": true,
-	"package": "io.github.andrew6rant.directional.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"FlowerPotBlockMixin",
-		"LanternBlockMixin",
-		"TorchBlockMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"client": [
-	]
+  "required": true,
+  "package": "io.github.andrew6rant.directional.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "FlowerPotBlockMixin",
+    "LanternBlockMixin",
+    "TorchBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "ChunkBuilderRebuildTaskMixin"
+  ]
 }
