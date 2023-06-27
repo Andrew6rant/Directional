@@ -1,6 +1,8 @@
 package io.github.andrew6rant.directional.mixin;
 
 import io.github.andrew6rant.directional.PlacementUtil;
+import net.fabricmc.fabric.api.renderer.v1.model.FabricBakedModel;
+import net.fabricmc.fabric.api.renderer.v1.render.RenderContext;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
@@ -13,6 +15,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.BlockRenderView;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.spongepowered.asm.mixin.Final;
@@ -21,9 +25,10 @@ import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.Shadow;
 
 import java.util.Map;
+import java.util.function.Supplier;
 
 @Mixin(FlowerPotBlock.class)
-public class FlowerPotBlockMixin extends Block {
+public class FlowerPotBlockMixin extends Block implements FabricBakedModel {
 	@Shadow @Final private static Map<Block, Block> CONTENT_TO_POTTED;
 	@Mutable
 	@Shadow @Final private final Block content;
@@ -83,5 +88,18 @@ public class FlowerPotBlockMixin extends Block {
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
 		return PlacementUtil.calcPlacementState(ctx, this.getDefaultState());
+	}
+
+	@Override
+	public boolean isVanillaAdapter() {
+		return false;
+	}
+
+	@Override
+	public void emitBlockQuads(BlockRenderView blockView, BlockState state, BlockPos pos, Supplier<Random> randomSupplier, RenderContext context) {
+	}
+
+	@Override
+	public void emitItemQuads(ItemStack stack, Supplier<Random> randomSupplier, RenderContext context) {
 	}
 }

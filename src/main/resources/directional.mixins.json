@@ -3,8 +3,11 @@
   "package": "io.github.andrew6rant.directional.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AbstractBlockMixin",
+    "BlockMixin",
     "FlowerPotBlockMixin",
     "LanternBlockMixin",
+    "PistonMixin",
     "TorchBlockMixin"
   ],
   "injectors": {
